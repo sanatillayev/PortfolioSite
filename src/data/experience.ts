@@ -1,0 +1,105 @@
+import { Company } from '@/types'
+
+export const companies: Company[] = [
+  {
+    id: 'ovi',
+    name: 'OVI Uzbekistan',
+    role: 'iOS Engineer',
+    period: 'Mar 2026 — Present',
+    industry: 'HealthTech',
+    emoji: '🏥',
+    description:
+      'Building health-focused iOS applications at OVI Uzbekistan. Active role — currently crafting the next generation of healthtech for the region.',
+    highlights: [
+      'Developing HealthTech iOS application from the ground up',
+      'Swift + SwiftUI + Combine stack',
+    ],
+    isCurrent: true,
+    color: '#30D158',
+  },
+  {
+    id: 'oson',
+    name: 'OSON',
+    role: 'iOS Engineer',
+    period: 'Oct 2025 — Feb 2026',
+    industry: 'Fintech',
+    emoji: '🏦',
+    description:
+      "Worked on Uzbekistan's leading payment super-app and its crypto companion. Led a technical audit replacing third-party dependencies with native solutions, fixed critical concurrency bugs, and built a reusable UI component library.",
+    highlights: [
+      'Native URLSession/Codable layer replacing Alamofire + ObjectMapper — zero third-party networking',
+      'Memory leak audit: identified and fixed delegate retain cycles across screens using Instruments',
+      'Token refresh race condition fix using serial DispatchQueue with request suspension and replay',
+      'Built reusable UI component library shared across Oson and OsonX',
+    ],
+    apps: ['Oson', 'OsonX', 'EasyPay (Tajikistan white-label)'],
+    color: '#007AFF',
+  },
+  {
+    id: 'mimsoft',
+    name: 'Mimsoft / laCafe',
+    role: 'iOS Developer',
+    period: 'Mar 2024 — Feb 2026',
+    industry: 'Logistics · F&B · Marketplace',
+    emoji: '🚛',
+    description:
+      'Shipped 10 apps (8 iOS + 2 iPadOS) across logistics, food & beverage, and marketplace verticals. Core Bluetooth hardware integration, Kotlin Multiplatform, and mentored an intern developer.',
+    highlights: [
+      '10 apps shipped across 3 verticals in under 2 years',
+      'Core Bluetooth: PT30/iOSX ELD hardware pairing with background reconnection',
+      'Kotlin Multiplatform: shared business logic with expect/actual pattern',
+      'Offline-first architecture with Core Data sync and conflict resolution',
+      'Critical Alerts entitlement approved by App Store Review',
+      'Mentored junior developer through code reviews and pair programming',
+    ],
+    apps: [
+      'Pilot ELD',
+      'Blue Star Driver',
+      'LaCourier',
+      'LaCollector',
+      'HESAP',
+      'Gumma Xonim',
+      'Strawberry House',
+      'Trend Bakery',
+      'Giotto',
+      'Yewoo',
+    ],
+    color: '#FF6B35',
+  },
+  {
+    id: 'wellmate',
+    name: 'Wellmate Inc.',
+    role: 'iOS Developer',
+    period: 'Aug 2022 — Feb 2024',
+    industry: 'Health',
+    emoji: '💊',
+    description:
+      'Built AI-powered supplement tracking app in SwiftUI with UDF architecture and async/await. Contributed to 3+ major releases as part of a 4-person iOS team.',
+    highlights: [
+      'SwiftUI + UDF + Async/Await from day one',
+      'Custom swipe gesture View Modifier — +10% interaction rate',
+      'REST API integration with structured concurrency',
+      'Contributed to 3+ major releases with 4-person iOS team',
+    ],
+    apps: ['Wellmate'],
+    color: '#30D158',
+  },
+  {
+    id: 'novalab',
+    name: 'Novalab Tech',
+    role: 'UI/UX Designer',
+    period: 'Aug 2021 — Feb 2022',
+    industry: 'Design',
+    emoji: '🎨',
+    description:
+      'Origin story — where design intuition was built before engineering. Designed gaming platform UI and mobile app interfaces, collaborating cross-functionally with developers.',
+    highlights: [
+      'Gaming platform UI design',
+      'Mobile app interface design',
+      'Cross-functional collaboration with engineering teams',
+      'Built the design eye that now informs every line of code',
+    ],
+    isOrigin: true,
+    color: '#BF5AF2',
+  },
+]
