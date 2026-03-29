@@ -12,7 +12,7 @@ export const COLORS = {
 } as const
 
 export const SCENE = {
-  orbitRadii: [5, 8, 11] as const,
+  orbitRadii: [5, 8, 11, 14] as const,
   starCount: 8000,
   starCountMobile: 2000,
   cameraNear: 0.1,

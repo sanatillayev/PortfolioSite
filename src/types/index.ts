@@ -1,30 +1,38 @@
+export type Category =
+  | 'HealthTech' | 'Fintech' | 'Crypto' | 'Logistics' | 'LegalTech'
+  | 'F&B' | 'F&B Ops' | 'F&B Menu' | 'E-Commerce' | 'Car Wash'
+
+export type Platform = 'iOS' | 'iPadOS' | 'iOS + iPadOS' | 'iOS + Android (KMP)'
+export type Role = 'Engineer' | 'Head of Mobile'
+
 export interface Project {
   id: string
   name: string
   tagline: string
-  description: string
-  challenge: string
-  category: ProjectCategory
-  color: string
-  tech: string[]
-  features: string[]
+  category: Category
+  platform: Platform
   employer: string
-  year: string
+  period: string
+  role: Role
+  accentColor: string
   appStoreUrl?: string
+  playStoreUrl?: string
+  landingUrl?: string
+  storeNote?: string
+  description: string
+  features: string[]
+  techStack: string[]
+  hardPart: {
+    title: string
+    story: string
+    codeHint?: string
+    codeSnippet?: string
+  }
+  isWhiteLabel?: boolean
+  whiteLabelFamily?: string
   isCurrent?: boolean
-  orbitRadius: number
-  orbitSpeed: number
-  orbitOffset: number
+  notPublished?: boolean
 }
-
-export type ProjectCategory =
-  | 'fintech'
-  | 'crypto'
-  | 'healthtech'
-  | 'logistics'
-  | 'f&b'
-  | 'marketplace'
-  | 'personal'
 
 export interface Company {
   id: string
@@ -39,26 +47,4 @@ export interface Company {
   emoji: string
   isCurrent?: boolean
   isOrigin?: boolean
-}
-
-export interface Skill {
-  id: string
-  name: string
-  category: SkillCategory
-  level: number // 0-1
-  x: number
-  y: number
-  connections: string[] // ids of connected skills
-}
-
-export type SkillCategory =
-  | 'language'
-  | 'framework'
-  | 'tool'
-  | 'architecture'
-  | 'platform'
-
-export interface CameraTarget {
-  position: [number, number, number]
-  lookAt: [number, number, number]
 }

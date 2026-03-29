@@ -1,41 +1,27 @@
 'use client'
 
-import dynamic from 'next/dynamic'
-import LoadingScreen from '@/components/ui/LoadingScreen'
-import CustomCursor from '@/components/ui/CustomCursor'
-import ScrollProgress from '@/components/ui/ScrollProgress'
-import Navbar from '@/components/ui/Navbar'
+import Loading from '@/components/sections/Loading'
+import Navigation from '@/components/layout/Navigation'
 import Hero from '@/components/sections/Hero'
-import About from '@/components/sections/About'
-import Experience from '@/components/sections/Experience'
+import Identity from '@/components/sections/Identity'
+import Timeline from '@/components/sections/Timeline'
 import Projects from '@/components/sections/Projects'
 import ProjectModal from '@/components/sections/ProjectModal'
-import Engineering from '@/components/sections/Engineering'
-import Architecture from '@/components/sections/Architecture'
 import Contact from '@/components/sections/Contact'
-
-const Scene = dynamic(() => import('@/components/canvas/Scene'), {
-  ssr: false,
-})
 
 export default function Home() {
   return (
     <>
-      <LoadingScreen />
-      <CustomCursor />
-      <ScrollProgress />
-      <Navbar />
-      <Scene />
+      <Loading />
+      <Navigation />
 
-      <div className="relative z-10">
+      <main>
         <Hero />
-        <About />
-        <Experience />
+        <Identity />
+        <Timeline />
         <Projects />
-        <Engineering />
-        <Architecture />
         <Contact />
-      </div>
+      </main>
 
       <ProjectModal />
     </>

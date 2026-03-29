@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: '%s | Bilol Sanatillaev',
   },
   description:
-    'iOS Engineer with 10+ shipped apps across fintech, crypto, healthtech, logistics, and F&B. Specializing in Swift, SwiftUI, UIKit, and Clean Architecture. Based in Tashkent, available for remote work worldwide.',
+    'iOS Engineer with 20 shipped apps (15 on App Store) across fintech, crypto, healthtech, logistics, and F&B. Specializing in Swift, SwiftUI, UIKit, and Clean Architecture. Based in Tashkent, available for remote work worldwide.',
   keywords: [
     'Bilol Sanatillaev',
     'iOS Engineer',
@@ -80,7 +80,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${jakarta.variable} ${jetbrains.variable}`}>
-      <body className="font-sans bg-void text-white antialiased">
+      <body className="font-sans bg-black text-apple-light antialiased">
         <JsonLd />
         {children}
       </body>
