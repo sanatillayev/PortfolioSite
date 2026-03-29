@@ -5,10 +5,10 @@ import { motion, useInView } from 'framer-motion'
 import FrostedPanel from '@/components/ui/FrostedPanel'
 
 const stats = [
-  { label: 'Apps Shipped', value: 10, suffix: '+' },
+  { label: 'Apps Shipped', value: 20 },
   { label: 'Years iOS', value: 3, suffix: '+' },
-  { label: 'Companies', value: 4 },
-  { label: 'Platforms', value: 2, note: 'iOS + iPadOS' },
+  { label: 'Companies', value: 5 },
+  { label: 'On App Store', value: 15 },
 ]
 
 const archTags = ['MVVM', 'MVVM+C', 'Clean', 'UDF', 'Modular', 'MVP']
@@ -71,8 +71,8 @@ export default function About() {
               that feel inevitable — fast, stable, architecturally clean.
             </p>
             <p className="text-white/70 leading-relaxed mb-5">
-              10+ apps shipped across fintech, crypto, healthtech, logistics,
-              and F&B. Currently building at{' '}
+              20+ apps shipped across fintech, crypto, healthtech, logistics,
+              legal tech, and F&B. Currently building at{' '}
               <span className="text-ios-green">OVI Uzbekistan</span>.
             </p>
 

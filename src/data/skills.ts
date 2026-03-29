@@ -1,4 +1,12 @@
-import { Skill } from '@/types'
+interface Skill {
+  id: string
+  name: string
+  category: string
+  level: number
+  x: number
+  y: number
+  connections: string[]
+}
 
 export const skills: Skill[] = [
   // Languages — center cluster

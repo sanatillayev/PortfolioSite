@@ -16,7 +16,7 @@ const swiftCode = [
   '',
   'bilol.load() // ...',
   '',
-  '// Compiling 10+ shipped apps...',
+  '// Compiling 20 shipped apps...',
   '// Linking experience data...',
   '// Initializing universe...',
 ]
@@ -25,7 +25,7 @@ export default function LoadingScreen() {
   const [progress, setProgress] = useState(0)
   const [visibleLines, setVisibleLines] = useState(0)
   const [buildSucceeded, setBuildSucceeded] = useState(false)
-  const { isLoading, setLoading, sceneReady } = useAppStore()
+  const { isLoading, setLoading } = useAppStore()
   const startTime = useRef(Date.now())
 
   useEffect(() => {
@@ -49,13 +49,13 @@ export default function LoadingScreen() {
           clearInterval(progressInterval)
           return 100
         }
-        const increment = sceneReady ? 8 : 3
+        const increment = prev > 60 ? 8 : 3
         return Math.min(prev + increment, 100)
       })
     }, 80)
 
     return () => clearInterval(progressInterval)
-  }, [sceneReady])
+  }, [])
 
   useEffect(() => {
     if (progress >= 100) {

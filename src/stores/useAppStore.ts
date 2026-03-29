@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import type { CameraTarget, ProjectCategory } from '@/types'
+import type { Category } from '@/types'
 
 interface AppState {
   // UI
@@ -8,14 +8,8 @@ interface AppState {
   activeSection: string
   menuOpen: boolean
 
-  // Scene
-  selectedApp: string | null
-  hoveredApp: string | null
-  cameraTarget: CameraTarget | null
-  sceneReady: boolean
-
   // Projects
-  projectFilter: ProjectCategory | 'all'
+  projectFilter: Category | 'All'
   projectModalOpen: boolean
   modalProjectId: string | null
 
@@ -25,14 +19,8 @@ interface AppState {
   setActiveSection: (section: string) => void
   setMenuOpen: (open: boolean) => void
 
-  // Scene actions
-  setSelectedApp: (id: string | null) => void
-  setHoveredApp: (id: string | null) => void
-  setCameraTarget: (target: CameraTarget | null) => void
-  setSceneReady: (ready: boolean) => void
-
   // Project actions
-  setProjectFilter: (filter: ProjectCategory | 'all') => void
+  setProjectFilter: (filter: Category | 'All') => void
   openProjectModal: (id: string) => void
   closeProjectModal: () => void
 }
@@ -44,14 +32,8 @@ export const useAppStore = create<AppState>((set) => ({
   activeSection: 'hero',
   menuOpen: false,
 
-  // Scene initial
-  selectedApp: null,
-  hoveredApp: null,
-  cameraTarget: null,
-  sceneReady: false,
-
   // Projects initial
-  projectFilter: 'all',
+  projectFilter: 'All',
   projectModalOpen: false,
   modalProjectId: null,
 
@@ -60,12 +42,6 @@ export const useAppStore = create<AppState>((set) => ({
   setCursorVariant: (variant) => set({ cursorVariant: variant }),
   setActiveSection: (section) => set({ activeSection: section }),
   setMenuOpen: (open) => set({ menuOpen: open }),
-
-  // Scene actions
-  setSelectedApp: (id) => set({ selectedApp: id }),
-  setHoveredApp: (id) => set({ hoveredApp: id }),
-  setCameraTarget: (target) => set({ cameraTarget: target }),
-  setSceneReady: (ready) => set({ sceneReady: ready }),
 
   // Project actions
   setProjectFilter: (filter) => set({ projectFilter: filter }),
